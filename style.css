@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.mapa-container {
+ /*  background-image: url("img/Frame1.png");
+  background-position: center;
+  background-size: cover; */
+  /*  background-color: #d8d8d8; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.mapa {
+  /* filter: blur(10px); */
+  -webkit-mask-image: radial-gradient(circle, rgb(0, 0, 0) 90%, transparent 90%);
+  mask-image: radial-gradient(circle, rgb(0, 0, 0) 80%, transparent 89%);
+}
+
+
+
+/* @media  (max-width: 1200px)  {
+      .logo-card img,
+      .logo-card h2 {
+        width: 100px;
+        font-size: 20px;
+      }
+} */

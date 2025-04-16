@@ -1,0 +1,89 @@
+.card {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+  }
+  
+  .card.ativo {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+  .visible-card{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 50vh;
+    max-height: 50vh;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  .card-atracoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .card-atracoes ul {
+    height: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-tempo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+  .card-tempo button {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #0064b4;
+    color: white;
+    font-size: 1.2em;
+  }
+  .tempo{
+      font-size: 1.8em;
+      font-weight: 800;
+  }
+  .card h2 {
+    text-transform: uppercase;
+    color: #0064b4;
+  }
+  .card main{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+  
+  }
+  .logo-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+  }
+  .logo-card img,
+  .logo-card h2 {
+    width: 50%;
+    font-size: 2.5em;
+  }
+
+
+
