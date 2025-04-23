@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu com Submenus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+    }
+
+    /* Submenu padrão escondido */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #444;
+      min-width: 160px;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .submenu a {
+      padding: 8px 12px;
+      color: white;
+    }
+
+    /* Exibir submenu ao passar o mouse (desktop) */
+    .menu > li:hover .submenu {
+      display: flex;
+    }
+
+    /* Ícone do menu hamburguer */
+    .menu-toggle, .submenu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      background: white;
+      height: 3px;
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 1200px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 50%;
+      }
+
+      .menu > li {
+        width: 100%;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+      }
+
+      /* Submenu no mobile */
+      .submenu {
+        position: static;
+        display: none;
+        background: #444;
+      }
+
+      /* Estilo para label que ativa submenu */
+      .submenu-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 12px;
+        color: white;
+      }
+
+      /* Mostra submenu quando toggle estiver ativado */
+      .submenu-toggle:checked + .submenu-label + .submenu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Adiciona um símbolo [+] ou [-] */
+      .submenu-label::after {
+        content: "+";
+      }
+
+      .submenu-toggle:checked + .submenu-label::after {
+        content: "-";
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- Toggle geral do menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <ul class="menu">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+
+      <!-- Item com submenu -->
+      <li>
+        <!-- Toggle do submenu no mobile -->
+        <input type="checkbox" id="services-toggle" class="submenu-toggle" />
+        <label for="services-toggle" class="submenu-label">Serviços</label>
+        <ul class="submenu">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Consultoria</a></li>
+          <li><a href="#">Marketing</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
