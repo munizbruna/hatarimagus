@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/menu-style.css" />
+    <link rel="stylesheet" href="../css/wildwest.css" />
+    
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li><a href="pages/ingressos.html">Ingressos</a></li>
+        <li>
+          <a href="#">Sobre</a>
+          <ul>
+            <li><a href="pages/quemsomos.html">Quem somos</a></li>
+            <li><a href="#">Nossa história</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Atrações</a>
+          <ul>
+            <li><a href="wildwest.html">Wild West</a></li>
+            <li><a href="kamindamundi.html">Kaminda Mundi</a></li>
+            <li><a href="mistieri.html">Mistieri</a></li>
+            <li><a href="aribabiba.html">Aribabiba</a></li>
+            <li><a href="infantasia.html">Infantasia</a></li>
+            <li><a href="../index.html">Mapa</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+      <img src="../img/logo_25anos_hh_headerv2.png" alt="logo" />
+      <div class="vazio"></div>
+    </nav>
+
+    <section>
+      <main>
+        <div class="imagem">
+          <p>helo</p>
+        </div>
+
+        <div class="menususpenso">
+          <h3>Atrações</h3>
+
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 Namuskita</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Tiro ao alvo pra você testar sua pontaria</p>
+                <ul>
+                  <li>Altura mínima: não há.</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 LA MINA DEL JOE SACRAMENTO</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Uma misteriosa mina abandonada</p>
+                <ul>
+                  <li>Altura mínima: 1,20m</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 Namuskita</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Tiro ao alvo pra você testar sua pontaria</p>
+                <ul>
+                  <li>Altura mínima: não há.</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 LA MINA DEL JOE SACRAMENTO</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Uma misteriosa mina abandonada</p>
+                <ul>
+                  <li>Altura mínima: 1,20m</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 Namuskita</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Tiro ao alvo pra você testar sua pontaria</p>
+                <ul>
+                  <li>Altura mínima: não há.</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="card" onclick="toggleInfo(this)">
+            <h3>🎢 LA MINA DEL JOE SACRAMENTO</h3>
+            <div class="info" style="display: none">
+                <p>Categoria: Familiar</p>
+                <p>Uma misteriosa mina abandonada</p>
+                <ul>
+                  <li>Altura mínima: 1,20m</li>
+                  <li>Altura máxima: não há.</li>
+                </ul>
+            </div>
+          </div>
+
+          
+      </main>
+    </section>
+    <script>
+      function toggleInfo(card) {
+        const info = card.querySelector(".info");
+        info.style.display = info.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
